@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  each blog in blogs
+    div=  blog.title
+    div 
+       img(src=`${blog.image}`)
+    div=  blog.body
+    div=  blog.date
+    a(href=`/blogs/${blog._id}` class= "ui red basic button") MORE INFO

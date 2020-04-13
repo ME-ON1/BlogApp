@@ -1,0 +1,13 @@
+extends layout
+block content
+  center 
+    div(class="ui")
+      img(src=`${blog.image}` alt="there isa erroe")
+    li= blog.title
+    li= blog.body
+    li= blog.date 
+    div
+      form(action=`/blogs/${blog._id}?_method=DELETE` method="POST" ) 
+          button(class="ui red fill button ")  DELETE 
+    div
+      a(href=`/blogs/${blog._id}/edit` class="ui green button") MODIFY 
